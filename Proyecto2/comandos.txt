@@ -1,0 +1,9 @@
+mkdisk -size=5 -unit=m -path=/home/victorcuches/Escritorio/P2/Disco1.dk
+fdisk -size=10 -path=/home/victorcuches/Escritorio/P2/Disco1.dk -unit=k -name=Particion1 -fit=ff -type=P
+fdisk -size=1024 -path=/home/victorcuches/Escritorio/P2/Disco1.dk -unit=k -name=Particion2 -type=P
+mount -path=/home/victorcuches/Escritorio/P2/Disco1.dk -name=Particion1
+rep -id=071a -path=/home/victorcuches/Escritorio/P2/reportes/disco1.png -name=disk
+
+mkfs -type=fast -id=071a
+rep -id=071a -path=/home/victorcuches/Escritorio/P2/reportes/hola.png -name=tree
+login -password=123 -usuario=root -id=071a
